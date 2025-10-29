@@ -1,5 +1,5 @@
-import re from "react";
-import { useInRouterContext as te, BrowserRouter as ne, Routes as ae, Route as oe } from "react-router-dom";
+import te from "react";
+import { useInRouterContext as ne, BrowserRouter as ae, Routes as oe, Route as $ } from "react-router-dom";
 var b = { exports: {} }, _ = {};
 /**
  * @license React
@@ -10,11 +10,11 @@ var b = { exports: {} }, _ = {};
  * This source code is licensed under the MIT license found in the
  * LICENSE file in the root directory of this source tree.
  */
-var $;
+var F;
 function se() {
-  if ($) return _;
-  $ = 1;
-  var s = Symbol.for("react.transitional.element"), R = Symbol.for("react.fragment");
+  if (F) return _;
+  F = 1;
+  var l = Symbol.for("react.transitional.element"), R = Symbol.for("react.fragment");
   function i(f, o, u) {
     var d = null;
     if (u !== void 0 && (d = "" + u), o.key !== void 0 && (d = "" + o.key), "key" in o) {
@@ -23,7 +23,7 @@ function se() {
         m !== "key" && (u[m] = o[m]);
     } else u = o;
     return o = u.ref, {
-      $$typeof: s,
+      $$typeof: l,
       type: f,
       key: d,
       ref: o !== void 0 ? o : null,
@@ -42,13 +42,13 @@ var E = {};
  * This source code is licensed under the MIT license found in the
  * LICENSE file in the root directory of this source tree.
  */
-var F;
-function ue() {
-  return F || (F = 1, process.env.NODE_ENV !== "production" && (function() {
-    function s(e) {
+var D;
+function le() {
+  return D || (D = 1, process.env.NODE_ENV !== "production" && (function() {
+    function l(e) {
       if (e == null) return null;
       if (typeof e == "function")
-        return e.$$typeof === Q ? null : e.displayName || e.name || null;
+        return e.$$typeof === K ? null : e.displayName || e.name || null;
       if (typeof e == "string") return e;
       switch (e) {
         case T:
@@ -57,32 +57,32 @@ function ue() {
           return "Profiler";
         case V:
           return "StrictMode";
-        case X:
-          return "Suspense";
         case B:
+          return "Suspense";
+        case H:
           return "SuspenseList";
-        case Z:
+        case Q:
           return "Activity";
       }
       if (typeof e == "object")
         switch (typeof e.tag == "number" && console.error(
           "Received an unexpected object in getComponentNameFromType(). This is likely a bug in React. Please file an issue."
         ), e.$$typeof) {
-          case U:
-            return "Portal";
-          case z:
-            return e.displayName || "Context";
           case J:
-            return (e._context.displayName || "Context") + ".Consumer";
+            return "Portal";
           case G:
+            return e.displayName || "Context";
+          case z:
+            return (e._context.displayName || "Context") + ".Consumer";
+          case X:
             var r = e.render;
             return e = e.displayName, e || (e = r.displayName || r.name || "", e = e !== "" ? "ForwardRef(" + e + ")" : "ForwardRef"), e;
-          case H:
-            return r = e.displayName || null, r !== null ? r : s(e.type) || "Memo";
+          case Z:
+            return r = e.displayName || null, r !== null ? r : l(e.type) || "Memo";
           case k:
             r = e._payload, e = e._init;
             try {
-              return s(e(r));
+              return l(e(r));
             } catch {
             }
         }
@@ -113,7 +113,7 @@ function ue() {
       if (typeof e == "object" && e !== null && e.$$typeof === k)
         return "<...>";
       try {
-        var r = s(e);
+        var r = l(e);
         return r ? "<" + r + ">" : "<...>";
       } catch {
         return "<...>";
@@ -145,13 +145,13 @@ function ue() {
         configurable: !0
       });
     }
-    function M() {
-      var e = s(this.type);
+    function W() {
+      var e = l(this.type);
       return N[e] || (N[e] = !0, console.error(
         "Accessing element.ref was removed in React 19. ref is now a regular prop. It will be removed from the JSX Element type in a future release."
       )), e = this.props.ref, e !== void 0 ? e : null;
     }
-    function W(e, r, t, n, v, j) {
+    function U(e, r, t, n, v, j) {
       var a = t.ref;
       return e = {
         $$typeof: w,
@@ -161,7 +161,7 @@ function ue() {
         _owner: n
       }, (a !== void 0 ? a : null) !== null ? Object.defineProperty(e, "ref", {
         enumerable: !1,
-        get: M
+        get: W
       }) : Object.defineProperty(e, "ref", { enumerable: !1, value: null }), e._store = {}, Object.defineProperty(e._store, "validated", {
         configurable: !1,
         enumerable: !1,
@@ -184,11 +184,11 @@ function ue() {
         value: j
       }), Object.freeze && (Object.freeze(e.props), Object.freeze(e)), e;
     }
-    function O(e, r, t, n, v, j) {
+    function A(e, r, t, n, v, j) {
       var a = r.children;
       if (a !== void 0)
         if (n)
-          if (K(a)) {
+          if (ee(a)) {
             for (n = 0; n < a.length; n++)
               S(a[n]);
             Object.freeze && Object.freeze(a);
@@ -198,9 +198,9 @@ function ue() {
             );
         else S(a);
       if (g.call(r, "key")) {
-        a = s(e);
-        var c = Object.keys(r).filter(function(ee) {
-          return ee !== "key";
+        a = l(e);
+        var c = Object.keys(r).filter(function(re) {
+          return re !== "key";
         });
         n = 0 < c.length ? "{key: someKey, " + c.join(": ..., ") + ": ...}" : "{key: someKey}", I[a + n] || (c = 0 < c.length ? "{" + c.join(": ..., ") + ": ...}" : "{}", console.error(
           `A props object containing a "key" prop is being spread into JSX:
@@ -217,13 +217,13 @@ React keys must be passed directly to JSX without using spread:
       }
       if (a = null, t !== void 0 && (i(t), a = "" + t), d(r) && (i(r.key), a = "" + r.key), "key" in r) {
         t = {};
-        for (var A in r)
-          A !== "key" && (t[A] = r[A]);
+        for (var O in r)
+          O !== "key" && (t[O] = r[O]);
       } else t = r;
       return a && m(
         t,
         typeof e == "function" ? e.displayName || e.name || "Unknown" : e
-      ), W(
+      ), U(
         e,
         a,
         t,
@@ -238,7 +238,7 @@ React keys must be passed directly to JSX without using spread:
     function P(e) {
       return typeof e == "object" && e !== null && e.$$typeof === w;
     }
-    var p = re, w = Symbol.for("react.transitional.element"), U = Symbol.for("react.portal"), T = Symbol.for("react.fragment"), V = Symbol.for("react.strict_mode"), q = Symbol.for("react.profiler"), J = Symbol.for("react.consumer"), z = Symbol.for("react.context"), G = Symbol.for("react.forward_ref"), X = Symbol.for("react.suspense"), B = Symbol.for("react.suspense_list"), H = Symbol.for("react.memo"), k = Symbol.for("react.lazy"), Z = Symbol.for("react.activity"), Q = Symbol.for("react.client.reference"), h = p.__CLIENT_INTERNALS_DO_NOT_USE_OR_WARN_USERS_THEY_CANNOT_UPGRADE, g = Object.prototype.hasOwnProperty, K = Array.isArray, x = console.createTask ? console.createTask : function() {
+    var p = te, w = Symbol.for("react.transitional.element"), J = Symbol.for("react.portal"), T = Symbol.for("react.fragment"), V = Symbol.for("react.strict_mode"), q = Symbol.for("react.profiler"), z = Symbol.for("react.consumer"), G = Symbol.for("react.context"), X = Symbol.for("react.forward_ref"), B = Symbol.for("react.suspense"), H = Symbol.for("react.suspense_list"), Z = Symbol.for("react.memo"), k = Symbol.for("react.lazy"), Q = Symbol.for("react.activity"), K = Symbol.for("react.client.reference"), h = p.__CLIENT_INTERNALS_DO_NOT_USE_OR_WARN_USERS_THEY_CANNOT_UPGRADE, g = Object.prototype.hasOwnProperty, ee = Array.isArray, x = console.createTask ? console.createTask : function() {
       return null;
     };
     p = {
@@ -252,7 +252,7 @@ React keys must be passed directly to JSX without using spread:
     )(), Y = x(f(u)), I = {};
     E.Fragment = T, E.jsx = function(e, r, t) {
       var n = 1e4 > h.recentlyCreatedOwnerStacks++;
-      return O(
+      return A(
         e,
         r,
         t,
@@ -262,7 +262,7 @@ React keys must be passed directly to JSX without using spread:
       );
     }, E.jsxs = function(e, r, t) {
       var n = 1e4 > h.recentlyCreatedOwnerStacks++;
-      return O(
+      return A(
         e,
         r,
         t,
@@ -273,20 +273,23 @@ React keys must be passed directly to JSX without using spread:
     };
   })()), E;
 }
-var D;
-function le() {
-  return D || (D = 1, process.env.NODE_ENV === "production" ? b.exports = se() : b.exports = ue()), b.exports;
+var L;
+function ue() {
+  return L || (L = 1, process.env.NODE_ENV === "production" ? b.exports = se() : b.exports = le()), b.exports;
 }
-var l = le();
-function L() {
-  return /* @__PURE__ */ l.jsxs(l.Fragment, { children: [
-    /* @__PURE__ */ l.jsx(ae, { children: /* @__PURE__ */ l.jsx(oe, { path: "radha-kotecha", element: () => /* @__PURE__ */ l.jsx("div", { children: "Radha Kotecha" }) }) }),
-    /* @__PURE__ */ l.jsx("p", { className: "read-the-docs", children: "Click on the Vite and React logos to learn more" })
+var s = ue();
+function M() {
+  return /* @__PURE__ */ s.jsxs(s.Fragment, { children: [
+    /* @__PURE__ */ s.jsxs(oe, { children: [
+      /* @__PURE__ */ s.jsx($, { path: "/", element: /* @__PURE__ */ s.jsx("div", { children: "JSON Builder Home" }) }),
+      /* @__PURE__ */ s.jsx($, { path: "radha-kotecha", element: /* @__PURE__ */ s.jsx("div", { children: "Radha Kotecha" }) })
+    ] }),
+    /* @__PURE__ */ s.jsx("p", { className: "read-the-docs", children: "Click on the Vite and React logos to learn more" })
   ] });
 }
 function fe() {
-  const s = te();
-  return console.log("insideRouter ->", s), s ? /* @__PURE__ */ l.jsx(L, {}) : /* @__PURE__ */ l.jsx(ne, { children: /* @__PURE__ */ l.jsx(L, {}) });
+  const l = ne();
+  return console.log("insideRouter ->", l), l ? /* @__PURE__ */ s.jsx(M, {}) : /* @__PURE__ */ s.jsx(ae, { children: /* @__PURE__ */ s.jsx(M, {}) });
 }
 export {
   fe as App

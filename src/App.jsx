@@ -10,8 +10,8 @@ function InnerApp() {
   return (
     <>
       <Routes>
-        {/* <Route path="/" element={<div>JSON Builder Home</div>} /> */}
-        <Route path="radha-kotecha" element={() => (<div>Radha Kotecha</div>)} />
+        <Route path="/" element={<div>JSON Builder Home</div>} />
+        <Route path="radha-kotecha" element={<div>Radha Kotecha</div>} />
       </Routes>
       <p className="read-the-docs">
         Click on the Vite and React logos to learn more
