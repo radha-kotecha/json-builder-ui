@@ -30,8 +30,8 @@
   "module": "dist-lib/lib.esm.js",
   "exports": {
     ".": {
-      "import": "./dist-lib/lib.esm.js",
-      "require": "./dist-lib/lib.cjs.js"
+      "import": "./dist-lib/lib.es.js",
+      "require": "./dist-lib/lib.umd.js"
     }
   }
 }
