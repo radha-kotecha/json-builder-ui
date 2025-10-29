@@ -1,4 +1,5 @@
 import { useState } from 'react'
+import { Route, Routes } from "react-router-dom";
 import viteLogo from '/vite.svg'
 import './App.css'
 
@@ -7,6 +8,9 @@ function App() {
 
   return (
     <>
+      <Routes>
+        <Route path="/radha-kotecha" element={() => (<div>Radha Kotecha</div>)} />
+      </Routes>
       <div>
         <a href="https://vite.dev" target="_blank">
           <img src={viteLogo} className="logo" alt="Vite logo" />
