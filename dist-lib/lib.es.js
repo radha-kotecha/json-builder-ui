@@ -531,7 +531,7 @@ function Be(t, r) {
 const y = (t) => t.join("/").replace(/\/\/+/g, "/"), Me = (t) => t.replace(/\/+$/, "").replace(/^\/*/, "/");
 function qe() {
   return /* @__PURE__ */ N.jsxs(N.Fragment, { children: [
-    /* @__PURE__ */ N.jsx(Pe, { children: /* @__PURE__ */ N.jsx(K, { path: "/radha-kotecha", element: () => /* @__PURE__ */ N.jsx("div", { children: "Radha Kotecha" }) }) }),
+    /* @__PURE__ */ N.jsx(Pe, { children: /* @__PURE__ */ N.jsx(K, { path: "radha-kotecha", element: () => /* @__PURE__ */ N.jsx("div", { children: "Radha Kotecha" }) }) }),
     /* @__PURE__ */ N.jsx("p", { className: "read-the-docs", children: "Click on the Vite and React logos to learn more" })
   ] });
 }
