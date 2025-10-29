@@ -22,7 +22,6 @@ function InnerApp() {
 
 export default function App() {
   const insideRouter = useInRouterContext();
-  console.log("insideRouter ->", insideRouter)
 
   // ✅ If running standalone, wrap in BrowserRouter
   if (!insideRouter) {

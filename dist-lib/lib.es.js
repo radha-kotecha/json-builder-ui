@@ -43,7 +43,7 @@ var E = {};
  * LICENSE file in the root directory of this source tree.
  */
 var D;
-function le() {
+function ue() {
   return D || (D = 1, process.env.NODE_ENV !== "production" && (function() {
     function l(e) {
       if (e == null) return null;
@@ -127,7 +127,7 @@ function le() {
       return Error("react-stack-top-frame");
     }
     function d(e) {
-      if (g.call(e, "key")) {
+      if (y.call(e, "key")) {
         var r = Object.getOwnPropertyDescriptor(e, "key").get;
         if (r && r.isReactWarning) return !1;
       }
@@ -135,7 +135,7 @@ function le() {
     }
     function m(e, r) {
       function t() {
-        y || (y = !0, console.error(
+        g || (g = !0, console.error(
           "%s: `key` is not a prop. Trying to access it will result in `undefined` being returned. If you need to access the same value within the child component, you should pass it as a different prop. (https://react.dev/link/special-props)",
           r
         ));
@@ -197,7 +197,7 @@ function le() {
               "React.jsx: Static children should always be an array. You are likely explicitly calling React.jsxs or React.jsxDEV. Use the Babel transform instead."
             );
         else S(a);
-      if (g.call(r, "key")) {
+      if (y.call(r, "key")) {
         a = l(e);
         var c = Object.keys(r).filter(function(re) {
           return re !== "key";
@@ -238,7 +238,7 @@ React keys must be passed directly to JSX without using spread:
     function P(e) {
       return typeof e == "object" && e !== null && e.$$typeof === w;
     }
-    var p = te, w = Symbol.for("react.transitional.element"), J = Symbol.for("react.portal"), T = Symbol.for("react.fragment"), V = Symbol.for("react.strict_mode"), q = Symbol.for("react.profiler"), z = Symbol.for("react.consumer"), G = Symbol.for("react.context"), X = Symbol.for("react.forward_ref"), B = Symbol.for("react.suspense"), H = Symbol.for("react.suspense_list"), Z = Symbol.for("react.memo"), k = Symbol.for("react.lazy"), Q = Symbol.for("react.activity"), K = Symbol.for("react.client.reference"), h = p.__CLIENT_INTERNALS_DO_NOT_USE_OR_WARN_USERS_THEY_CANNOT_UPGRADE, g = Object.prototype.hasOwnProperty, ee = Array.isArray, x = console.createTask ? console.createTask : function() {
+    var p = te, w = Symbol.for("react.transitional.element"), J = Symbol.for("react.portal"), T = Symbol.for("react.fragment"), V = Symbol.for("react.strict_mode"), q = Symbol.for("react.profiler"), z = Symbol.for("react.consumer"), G = Symbol.for("react.context"), X = Symbol.for("react.forward_ref"), B = Symbol.for("react.suspense"), H = Symbol.for("react.suspense_list"), Z = Symbol.for("react.memo"), k = Symbol.for("react.lazy"), Q = Symbol.for("react.activity"), K = Symbol.for("react.client.reference"), h = p.__CLIENT_INTERNALS_DO_NOT_USE_OR_WARN_USERS_THEY_CANNOT_UPGRADE, y = Object.prototype.hasOwnProperty, ee = Array.isArray, x = console.createTask ? console.createTask : function() {
       return null;
     };
     p = {
@@ -246,7 +246,7 @@ React keys must be passed directly to JSX without using spread:
         return e();
       }
     };
-    var y, N = {}, C = p.react_stack_bottom_frame.bind(
+    var g, N = {}, C = p.react_stack_bottom_frame.bind(
       p,
       u
     )(), Y = x(f(u)), I = {};
@@ -274,10 +274,10 @@ React keys must be passed directly to JSX without using spread:
   })()), E;
 }
 var L;
-function ue() {
-  return L || (L = 1, process.env.NODE_ENV === "production" ? b.exports = se() : b.exports = le()), b.exports;
+function le() {
+  return L || (L = 1, process.env.NODE_ENV === "production" ? b.exports = se() : b.exports = ue()), b.exports;
 }
-var s = ue();
+var s = le();
 function M() {
   return /* @__PURE__ */ s.jsxs(s.Fragment, { children: [
     /* @__PURE__ */ s.jsxs(oe, { children: [
@@ -288,8 +288,7 @@ function M() {
   ] });
 }
 function fe() {
-  const l = ne();
-  return console.log("insideRouter ->", l), l ? /* @__PURE__ */ s.jsx(M, {}) : /* @__PURE__ */ s.jsx(ae, { children: /* @__PURE__ */ s.jsx(M, {}) });
+  return ne() ? /* @__PURE__ */ s.jsx(M, {}) : /* @__PURE__ */ s.jsx(ae, { children: /* @__PURE__ */ s.jsx(M, {}) });
 }
 export {
   fe as App
