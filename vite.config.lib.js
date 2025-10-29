@@ -9,13 +9,16 @@ export default defineConfig({
             entry: 'src/lib.js',
             name: 'JsonBuilderUI',
             fileName: (format) => `lib.${format}.js`,
+            formats: ['es', 'umd'],
         },
         rollupOptions: {
-            external: ['react', 'react-dom'],
+            // ✅ Prevent bundling react, react-dom, and react-router-dom
+            external: ['react', 'react-dom', 'react-router-dom'],
             output: {
                 globals: {
                     react: 'React',
                     'react-dom': 'ReactDOM',
+                    'react-router-dom': 'ReactRouterDOM',
                 },
             },
         },
